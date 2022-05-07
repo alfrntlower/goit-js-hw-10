@@ -1,8 +1,7 @@
-<ul class="preview_list">
+
     {{#each this}}
-    <li class="mini_flag">
-        <img class="preview_pic" src="{{flags.svg}}" alt="flag{{name.official}}" width="25">
-        <h3 class="preview_title" data-name="{{name.official}}">{{name.official}}</h3>
+    <li class="country-list__item">
+        <img class="country-list__preview_pic" src="{{flags.svg}}" alt="flag{{name.official}}"  width="25">
+        <h3 class="country-list__preview_title" data-name="{{name.official}}">{{name.official}}</h3>
     </li>
     {{/each}}
-</ul>

@@ -1,15 +1,15 @@
-<div class="country">
-  <div class="country-img-top">
+<div class="country-info__card">
+  <div class="country-info__img-top">
     <img src="{{flags.svg}}" alt="{{name.official}}" width="50">
   </div>
-  <div class="country-body">
-    <h2 class="country-name"> {{name.official}}</h2>
-    <p class="country-capital">Capital: {{capital}}</p>
-    <p class="country-population">Population: {{population}}</p>
-    <p class="country-languages">Languages:</p>
+  <div class="country-info__thumb">
+    <h2 class="country-info__name"> {{name.official}}</h2>
+    <p class="country-info__capital">Capital: {{capital}}</p>
+    <p class="country-info__population">Population: {{population}}</p>
+    <p class="country-info__languages">Languages:</p>
     <ul>
                 {{#each languages}}
-                <li class="lang">{{[]}}</li>
+                <li class="country-info__lang">{{[]}}</li>
                 {{/each}}
             </ul>
 
