@@ -12,25 +12,18 @@ const countryInput = document.querySelector('#search-box');
 const countryContainer = document.querySelector('.country-info');
 const countriesPreviewList = document.querySelector('.country-list');
 
-countryInput.addEventListener("input", onSearchApi);
+countryInput.addEventListener("input", _.debounce(onSearchApi,DEBOUNCE_DELAY));
 
 function onSearchApi(evt) {
 
-    let countryName = evt.target.value;
+    let countryName = evt.target.value.trim();
 
-    setTimeout(() => {
+    if (!countryName) return;
+
         fetchCountries(countryName).
             then((countries) => {
                 renderCountries(countries);
             }).catch(onFetchError);
-    }, DEBOUNCE_DELAY);
-
-    // _.debounce(() => {
-    //     fetchCountries(countryName).
-    //         then((countries) => {
-    //             renderCountries(countries);
-    //         }).catch(onFetchError);
-    // }, DEBOUNCE_DELAY);
 
 }
 
