@@ -2,6 +2,5 @@ goit-js-hw-10
 
 https://alfrntlower.github.io/goit-js-hw-10/
 
-Задание - поиск стран
-
-Создай фронтенд часть приложения поиска данных о стране по её частичному или полному имени. Посмотри демо видео работы приложения.
+Task - country search
+Create a front-end part of the application to search for information about countries by their partial or full names.
